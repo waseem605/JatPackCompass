@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import com.example.jatpackcompass.ui.theme.JatPackCompassTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +18,9 @@ class MainActivity : ComponentActivity() {
             JatPackCompassTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    //Greeting("Android")
+                    //MyApp()
+                    ProfilePage()
                 }
             }
         }
@@ -28,11 +31,16 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String) {
     Text(text = "Hello $name!")
 }
+@Composable
+fun MyApp(){
+    Text(text = "Welcome to this video",fontSize = 30.sp)
+}
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    JatPackCompassTheme {
-        Greeting("Android")
-    }
+    MyApp()
+//    JatPackCompassTheme {
+//        Greeting("Android")
+//    }
 }
